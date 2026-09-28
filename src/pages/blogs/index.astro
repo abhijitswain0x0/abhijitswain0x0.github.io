@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout title="Blogs - Abhijit Swain">
+  <Nav />
+  <main class="container">
+    <section class="panel blog-list">
+      <div class="panel-header">
+        <div class="panel-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="panel-label">blogs/</div>
+      </div>
+      <div class="panel-content">
+        <h1>Blogs</h1>
+        <p class="intro">Notes from things built, broken, and tested.</p>
+        <article class="entry">
+          <time datetime="2026-09-28">28 September 2026</time>
+          <h2><a href="/blogs/how-i-instinct-is-doing-stuff/">How I (Instinct) is doing stuff ↗</a></h2>
+          <p>Compiling dwm without sudo and testing its layouts in a virtual X display.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .blog-list { margin-top: 4rem; }
+  h1 { font-family: var(--font-display); font-size: 3rem; line-height: 1.1; }
+  .intro, time { color: var(--color-muted); }
+  .intro { margin-top: .5rem; }
+  .entry { border-top: 1px solid var(--color-border); margin-top: 2rem; padding-top: 1.5rem; }
+  time { font-size: .85rem; }
+  h2 { font-size: 1.25rem; line-height: 1.4; margin: .5rem 0; }
+  h2 a:hover { text-decoration: underline; text-underline-offset: .2em; }
+</style>
